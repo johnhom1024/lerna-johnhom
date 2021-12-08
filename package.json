@@ -1,0 +1,8 @@
+{
+  "name": "lerna-johohom",
+  "private": true,
+  "workspaces": ["packages/@johnhom/*"],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
