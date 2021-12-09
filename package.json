@@ -1,8 +1,23 @@
 {
   "name": "lerna-johohom",
   "private": true,
-  "workspaces": ["packages/@johnhom/*"],
+  "workspaces": [
+    "packages/@johnhom/*"
+  ],
+  "scripts": {
+    "commit": "git-cz"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/cz-commitlint": "^15.0.0",
+    "commitizen": "^4.2.4",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
