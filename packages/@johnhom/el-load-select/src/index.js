@@ -12,7 +12,8 @@ const Plugin = {
     Vue.component(LoadSelect.name, LoadSelect);
     // 注册指令
     Vue.directive('loadmore', LoadMoreDirective)
-    Plugin.installed = true
+    // 设置安装成功
+    Plugin.installed = true;
   }
 }
 
