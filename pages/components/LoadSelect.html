@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LoadSelect | johnhom的工具库</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/lerna-johnhom/assets/css/0.styles.6e35b255.css" as="style"><link rel="preload" href="/lerna-johnhom/assets/js/app.2de1cea9.js" as="script"><link rel="preload" href="/lerna-johnhom/assets/js/2.2b013d06.js" as="script"><link rel="preload" href="/lerna-johnhom/assets/js/9.07945947.js" as="script"><link rel="preload" href="/lerna-johnhom/assets/js/6.0d98402d.js" as="script"><link rel="prefetch" href="/lerna-johnhom/assets/js/10.5deebb5e.js"><link rel="prefetch" href="/lerna-johnhom/assets/js/3.eb5d5da2.js"><link rel="prefetch" href="/lerna-johnhom/assets/js/4.6f8662f6.js"><link rel="prefetch" href="/lerna-johnhom/assets/js/5.82c41338.js"><link rel="prefetch" href="/lerna-johnhom/assets/js/7.579daefc.js"><link rel="prefetch" href="/lerna-johnhom/assets/js/8.10e89947.js">
+    <link rel="stylesheet" href="/lerna-johnhom/assets/css/0.styles.6e35b255.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lerna-johnhom/" class="home-link router-link-active"><!----> <span class="site-name">johnhom的工具库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lerna-johnhom/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/lerna-johnhom/pages/components/" class="nav-link router-link-active">
+  组件库
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lerna-johnhom/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/lerna-johnhom/pages/components/" class="nav-link router-link-active">
+  组件库
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件库</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/lerna-johnhom/pages/components/LoadSelect.html" aria-current="page" class="active sidebar-link">LoadSelect</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lerna-johnhom/pages/components/LoadSelect.html#示例" class="sidebar-link">示例</a></li><li class="sidebar-sub-header"><a href="/lerna-johnhom/pages/components/LoadSelect.html#安装" class="sidebar-link">安装</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="loadselect"><a href="#loadselect" class="header-anchor">#</a> LoadSelect</h1> <blockquote><p>基于element-ui的select组件二次封装的一个异步分页加载选择框</p></blockquote> <h2 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h2> <p>以下是load-select的示例</p> <div class="el-select"><!----><div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="min-width:;display:none;"><div class="el-scrollbar" style="display:none;"><div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-select-dropdown__list"><!----> <li class="el-select-dropdown__item is-disabled"><span>加载中...</span></li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div><!----></div></div> <details class="custom-block details"><summary>点击查看代码</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>load-select</span>
+    <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>selected<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>data<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:page</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>page<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:hasMore</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>more<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:request</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>getData<span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>load-select</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      selected<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+      page<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      more<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 传入给load-select组件的函数</span>
+    <span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> page <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> more <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> keyword <span class="token operator">=</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 访问后端接口API</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">requestAPI</span><span class="token punctuation">(</span><span class="token punctuation">{</span> page<span class="token punctuation">,</span> keyword <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>more<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">,</span> <span class="token operator">...</span>res<span class="token punctuation">.</span>result<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> res<span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token keyword">this</span><span class="token punctuation">.</span>page <span class="token operator">=</span> res<span class="token punctuation">.</span>page<span class="token punctuation">;</span>
+          <span class="token keyword">let</span> <span class="token punctuation">{</span> total<span class="token punctuation">,</span> page<span class="token punctuation">,</span> size <span class="token punctuation">}</span> <span class="token operator">=</span> res<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>more <span class="token operator">=</span> page <span class="token operator">*</span> size <span class="token operator">&lt;</span> total<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>page <span class="token operator">=</span> page<span class="token punctuation">;</span>
+          <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 模拟后端接口的API</span>
+    <span class="token function">requestAPI</span><span class="token punctuation">(</span><span class="token punctuation">{</span> page <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> size <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> keyword <span class="token operator">=</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>keyword<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              total<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+              page<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+              size<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+              result<span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                  label<span class="token operator">:</span> keyword<span class="token punctuation">,</span>
+                  value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                  label<span class="token operator">:</span> keyword <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                  value<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                  label<span class="token operator">:</span> keyword <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                  value<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">let</span> responseData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span> <span class="token comment">// 假设总共的数据有50条</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> index <span class="token operator">&lt;=</span> size<span class="token punctuation">;</span> index<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// serial：处于第几个元素，就显示多少序号</span>
+          <span class="token keyword">let</span> serial <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> size<span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>serial <span class="token operator">&lt;=</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            responseData<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              label<span class="token operator">:</span> serial<span class="token punctuation">,</span>
+              value<span class="token operator">:</span> serial<span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            total<span class="token punctuation">,</span>
+            page<span class="token punctuation">,</span>
+            size<span class="token punctuation">,</span>
+            result<span class="token operator">:</span> responseData<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">add</span> @johnhom/el-load-select
+
+<span class="token comment"># 或者可以使用npm</span>
+<span class="token comment"># npm install -S @johnhom/el-load-select</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/lerna-johnhom/assets/js/app.2de1cea9.js" defer></script><script src="/lerna-johnhom/assets/js/2.2b013d06.js" defer></script><script src="/lerna-johnhom/assets/js/9.07945947.js" defer></script><script src="/lerna-johnhom/assets/js/6.0d98402d.js" defer></script>
+  </body>
+</html>
