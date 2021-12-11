@@ -10,6 +10,10 @@ module.exports = {
       {
         text: '组件库',
         link: '/pages/components/'
+      },
+      {
+        text: 'Github',
+        link: 'https://github.com/johnhom1024/lerna-johnhom'
       }
     ],
     sidebar: {
