@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "commit": "git-cz",
-    "docs:dev": "vuepress dev docs"
+    "docs:dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
