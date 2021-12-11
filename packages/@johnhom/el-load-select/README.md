@@ -3,9 +3,9 @@
 ## 安装
 
 ```
-npm install @marihom/el-load-select
+npm install @johnhom/el-load-select
 
-# 或者 yarn add @marihom/el-load-select
+# 或者 yarn add @johnhom/el-load-select
 ```
 
 ## 使用教程
