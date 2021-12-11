@@ -2,6 +2,15 @@
 
 > 基于element-ui的select组件二次封装的一个异步分页加载选择框
 
+## 安装
+
+```shell
+yarn add @johnhom/el-load-select
+
+# 或者可以使用npm
+# npm install -S @johnhom/el-load-select
+```
+
 ## 示例
 
 以下是load-select的示例
@@ -106,12 +115,3 @@ export default {
 </script>
 ```
 :::
-
-## 安装
-
-```shell
-yarn add @johnhom/el-load-select
-
-# 或者可以使用npm
-# npm install -S @johnhom/el-load-select
-```
