@@ -1,5 +1,6 @@
 module.exports = {
   title: "johnhom的工具库",
+  base: '/lerna-johnhom/',
   themeConfig: {
     nav: [
       {
