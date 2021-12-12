@@ -35,7 +35,7 @@ lerna 就会在packages文件夹下自动生成一个`<project-name>`文件夹
 ```
 // package.json
 {
-    "workspaces": ["packages/@johnhom/*"],
+  "workspaces": ["packages/@johnhom/*"],
 }
 ```
 
@@ -99,23 +99,19 @@ lerna publish from-package
 
 ### 更新package.json中的版本号
 
-语义：
+版本的字段语义：
 
+```
 major：主版本号（大版本）
-
 minor：次版本号（小更新）
-
 patch：补丁号（补丁）
-
 premajor：预备主版本
-
 preminor: 预备次版本
-
 prepatch：预备补丁版本
-
 prerelease：预发布版本
+```
 
-lerna 命令
+使用lerna命令如下：
 
 ```
 lerna version [major | minor | patch | premajor | preminor | prepatch | prerelease]
