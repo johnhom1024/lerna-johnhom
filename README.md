@@ -1,5 +1,7 @@
 # 使用lerna管理多个npm模块
 
+> lerna + yarn + commitizen + commitlint
+
 ## 动机
 
 原本我已经有[el-load-select](https://github.com/johnhom1024/el-load-select)这个仓库了，后面修复了一个bug并发布版本的时候发现，npm会把package.json中一些无关信息给带上去，就比如`devDependencies`这个字段里我放了vuepress文档说明用到的依赖，还有展示的时候用到的element-ui，这些都是和el-load-select发布无关的一些依赖。
@@ -10,7 +12,9 @@
 
 * [el-load-select](https://github.com/johnhom1024/lerna-johnhom/tree/main/packages/%40johnhom/el-load-select)
 
-## lerna教程
+## lerna使用教程
+
+下面我就简单讲解一下在使用lerna的过程当中，用到的一些命令和一些遇到的问题。
 
 ### 初始化项目
 
