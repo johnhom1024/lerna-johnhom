@@ -2,9 +2,9 @@
 
 ## 动机
 
-原本我已经有[el-load-select](https://github.com/johnhom1024/el-load-select)这个仓库了，后面修复了一个bug并发布版本的时候发现，npm会把package.json中一些无关信息给带上去，就比如`devDependencies`这个字段里我放了一些文档说明用到的包比如说vuepress，还有展示的时候用到的element-ui，这些都是和el-load-select无关的一些包。
+原本我已经有[el-load-select](https://github.com/johnhom1024/el-load-select)这个仓库了，后面修复了一个bug并发布版本的时候发现，npm会把package.json中一些无关信息给带上去，就比如`devDependencies`这个字段里我放了vuepress文档说明用到的依赖，还有展示的时候用到的element-ui，这些都是和el-load-select发布无关的一些依赖。
 
-强迫症的我决定使用monorepo的方式管理el-load-select，这样可以把一些文档等无关的包放在root目录上的package.json里。管理monorepo的工具就使用开源并且热门的lerna啦。
+强迫症的我决定使用monorepo的方式管理el-load-select，这样可以把vuepress、element-ui这些和发布无关的依赖放在root目录上的package.json里。管理monorepo的工具就使用开源并且热门的lerna啦。
 
 ## 内部管理的npm模块清单
 
@@ -98,11 +98,17 @@ lerna publish from-package
 语义：
 
 major：主版本号（大版本）
+
 minor：次版本号（小更新）
+
 patch：补丁号（补丁）
+
 premajor：预备主版本
+
 preminor: 预备次版本
+
 prepatch：预备补丁版本
+
 prerelease：预发布版本
 
 lerna 命令
@@ -122,7 +128,7 @@ lerna version [major | minor | patch | premajor | preminor | prepatch | prerelea
 
 #### command.version
 
-```json
+```
 // lerna.json
 
 {
@@ -157,13 +163,16 @@ lerna version [major | minor | patch | premajor | preminor | prepatch | prerelea
 ### You must sign up for private packages
 
 npm ERR! publish Failed PUT 402
+
 npm ERR! code E402
+
 npm ERR! You must sign up for private packages : @yuyy/babel
 
 原因：
 
 npm publish 命令执行，默认是进行私有发布，参见官网publish命令
-上一篇文章最后提到过scoped的包私有发布时需要收费
+上一篇文章最后提到过scoped的包私有发布时需要收费。
+
 解决：如果不想花钱，那只能将包面向公共发布，这也符合npm鼓励开源的精神，这一点和GitHub创建仓库类似。
 
 ```
@@ -172,7 +181,7 @@ npm publish --access public
 
 如果是lerna项目，需要在待发布的package项目里的package.json加上以下字段：
 
-```json
+```
 // package.json
 
 "publishConfig": {
@@ -184,7 +193,7 @@ npm publish --access public
 
 举个例子：
 
-```json
+```
 // lerna.json
 {
   // 这里的version设置成了independent
@@ -204,3 +213,9 @@ npm publish --access public
 如果用以上的lerna.json配置文件，在使用lerna version命令进行提交时，%s或者%v会无法被转换成版本号。因为这里是发布某一个独立的package。
 
 官方文档也有说明：[这里](https://github.com/lerna/lerna/blob/main/commands/version/README.md#--message-msg)
+
+所以如果你设置了independent，则直接将message设置成如下即可：
+
+```
+"message": "chore(release): publish"
+```
